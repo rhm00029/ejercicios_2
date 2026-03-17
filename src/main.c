@@ -18,7 +18,9 @@ int main(void) {
         printf("1. Listar\n");
         printf("2. Anadir\n");
         printf("3. Modificar\n");
-        printf("4. Salir\n");
+        printf("4. Leer fichero texto\n");
+        printf("5. Guardar fichero texto\n");
+        printf("6. Salir\n");
 
         if (!leer_entero("Opcion: ", &op)) return 0;
         switch (op) {
@@ -31,8 +33,10 @@ int main(void) {
             case 3: printf("Modificar\n");
                 modificar(p);
                 break;
-            case 4: printf("Salir\n"); break;
+            case 4: printf("Leer fichero texto\n");break;
+            case 5 : printf("Guardar fichero texto\n");break;
+            case 6: printf("Salir\n"); break;
             default: printf("Acción no válida\n"); break;
         }
-    } while (op != 4);
+    } while (op != 6);
 }
